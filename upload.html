@@ -1,0 +1,80 @@
+<!DOCTYPE html>
+<html lang="">
+<head>
+<title>Predict</title>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0, maximum-scale=1.0, user-scalable=no">
+<link href="/static/layout/styles/layout.css" rel="stylesheet" type="text/css" media="all">
+</head>
+<body id="top">
+<!-- ################################################################################################ -->
+<!-- ################################################################################################ -->
+<!-- ################################################################################################ -->
+<!-- Top Background Image Wrapper -->
+<div class="bgded overlay" style="background-image:url('/static/images/demo/backgrounds/03.png');"> 
+  <!-- ################################################################################################ -->
+  <!-- ################################################################################################ -->
+  <!-- ################################################################################################ -->
+  <!-- ################################################################################################ -->
+  <div class="wrapper row1">
+    <nav id="mainav" class="hoc clear"> 
+      <!-- ################################################################################################ -->
+      <ul class="clear">
+        <li><a href="/home">Home</a></li>
+        <li class="active"><a href="/pred">Predict</a></li>
+      </ul>
+      <!-- ################################################################################################ -->
+    </nav>
+  </div>
+  <!-- ################################################################################################ -->
+  <!-- ################################################################################################ -->
+  <!-- ################################################################################################ -->
+  <div id="pageintro" class="hoc clear"> 
+    <!-- ################################################################################################ -->
+    <article>
+      <h3 class="heading">Solar power generation prediction</h3>
+    </article>
+    <!-- ################################################################################################ -->
+  </div>
+  <!-- ################################################################################################ -->
+</div>
+<!-- End Top Background Image Wrapper -->
+<!-- ################################################################################################ -->
+<!-- ################################################################################################ -->
+<!-- ################################################################################################ -->
+<div class="wrapper bgded" style="background-image:url('/static/images/demo/backgrounds/01.gif');">
+  <section id="callback" class="hoc clear"> 
+    <!-- ################################################################################################ -->
+    <div>
+      <h6 class="heading">Predict</h6>
+      <p class="btmspace-30">Enter values to predict solar power generation:</p>
+     <form action="{{ url_for('predict')}}" method="post">
+        <fieldset>
+        <input type="text" name="DC_POWER" id="DC_POWER" placeholder="Enter DC_POWER:">
+        <input type="text" name="AC_POWER" id="AC_POWER" placeholder="Enter AC_POWER:">
+        <input type="text" name="AMBIENT_TEMPERATURE" id="AMBIENT_TEMPERATURE" placeholder="Enter AMBIENT_TEMPERATURE:">
+        <input type="text" name="MODULE_TEMPERATURE" id="MODULE_TEMPERATURE" placeholder="Enter MODULE_TEMPERATURE:">
+        <input type="text" name="IRRADIATION" id="IRRADIATION" placeholder="Enter IRRADIATION:">
+          <button type="submit" id="PREDICT" value="PREDICT">PREDICT</button>
+        </fieldset>
+        <br>
+			<h3>{{ prediction_text }}</h3>
+      </form>
+    </div>
+    <!-- ################################################################################################ -->
+  </section>
+</div>
+    <!-- ################################################################################################ -->
+    <!-- / main body -->
+    <div class="clear"></div>
+  </main>
+<!-- ################################################################################################ -->
+<!-- ################################################################################################ -->
+<!-- ################################################################################################ -->
+<a id="backtotop" href="#top"><i class="fas fa-chevron-up"></i></a>
+<!-- JAVASCRIPTS -->
+<script src="/static/layout/scripts/jquery.min.js"></script>
+<script src="/static/layout/scripts/jquery.backtotop.js"></script>
+<script src="/static/layout/scripts/jquery.mobilemenu.js"></script>
+</body>
+</html>
